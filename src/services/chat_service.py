@@ -38,6 +38,9 @@ class ChatService:
                 return "re_screening_visat.txt"
             elif v_type == 'Visa U':
                 return "re_screening_visau.txt"
+            # NUEVA REGLA: Agregamos el soporte para Family Petition
+            elif v_type.upper() == 'FAMILY PETITION':
+                return "re_screening_family_petition.txt"
             else:
                 raise ValueError(f"Tipo de visa '{v_type}' no tiene un prompt definido para Re-Screening.")
                 
